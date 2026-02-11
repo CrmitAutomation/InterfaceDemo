@@ -60,6 +60,30 @@
       <value></value>
       <variableId>63e3bc06-0771-4004-af73-63e2ca34eda5</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>39a85fd4-3bc3-4552-803b-03ef0a653c3c</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>a0fd5b71-059f-4552-803a-12a10ba07574</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>cca42712-573c-4d52-97aa-f35a48aec6e7</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>2bf709b6-1cfb-4b1d-ba42-eb007b37b8d3</variableId>
+   </variableLinks>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
@@ -122,5 +146,33 @@
       <id>63e3bc06-0771-4004-af73-63e2ca34eda5</id>
       <masked>false</masked>
       <name>Quantity</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>39a85fd4-3bc3-4552-803b-03ef0a653c3c</id>
+      <masked>false</masked>
+      <name>FileName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>a0fd5b71-059f-4552-803a-12a10ba07574</id>
+      <masked>false</masked>
+      <name>AttachmentText</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>cca42712-573c-4d52-97aa-f35a48aec6e7</id>
+      <masked>false</masked>
+      <name>Userlookup</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>2bf709b6-1cfb-4b1d-ba42-eb007b37b8d3</id>
+      <masked>false</masked>
+      <name>ExistingCommissionSplit</name>
    </variable>
 </TestCaseEntity>

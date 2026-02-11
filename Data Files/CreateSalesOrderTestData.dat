@@ -9,8 +9,8 @@
    <dataFileGUID>91b8eeb0-fff9-4658-ad2e-5eb7664ccce5</dataFileGUID>
    <dataSourceUrl></dataSourceUrl>
    <driver>InternalData</driver>
-   <data>pt11user11%40interface.com.uat Interface%401 Positive EAAA+CS+Console. Golvbolaget+I+Arl%C3%B6v+Ab EMEA+842-SWE+SEK+Price+Book SE+-+Retail 4197002999K10100%0D%0A 1</data>
-   <data>pt15user15%40interface.com.uat Crmit%402026 Negative EAAA+CS+Console. Golvbolaget+I+Arl%C3%B6v+Ab EMEA+842-SWE+SEK+Price+Book SE+-+Retail 4197002999K10100 1</data>
+   <data>pt11user11%40interface.com.uat Interface%401 Positive EAAA+CS+Console. Golvbolaget+I+Arl%C3%B6v+Ab EMEA+842-SWE+SEK+Price+Book SE+-+Retail 4197006999A50300 1 File01 Test+Attachment 50 PT15 50 10</data>
+   <data>pt15user15%40interface.com.uat Crmit%402026 Negative EAAA+CS+Console. Golvbolaget+I+Arl%C3%B6v+Ab EMEA+842-SWE+SEK+Price+Book SE+-+Retail 4197006999A50300 1 File+02 Test+Attachment 50 PT11 50 10</data>
    <internalDataColumns>
       <columnIndex>0</columnIndex>
       <name>Username</name>
@@ -54,6 +54,36 @@
    <internalDataColumns>
       <columnIndex>8</columnIndex>
       <name>Quantity</name>
+      <size>2</size>
+   </internalDataColumns>
+   <internalDataColumns>
+      <columnIndex>9</columnIndex>
+      <name>FileName</name>
+      <size>2</size>
+   </internalDataColumns>
+   <internalDataColumns>
+      <columnIndex>10</columnIndex>
+      <name>AttachmentText</name>
+      <size>2</size>
+   </internalDataColumns>
+   <internalDataColumns>
+      <columnIndex>11</columnIndex>
+      <name>ExistingCommissionSplit</name>
+      <size>2</size>
+   </internalDataColumns>
+   <internalDataColumns>
+      <columnIndex>12</columnIndex>
+      <name>Userlookup</name>
+      <size>2</size>
+   </internalDataColumns>
+   <internalDataColumns>
+      <columnIndex>13</columnIndex>
+      <name>Influence / Commission</name>
+      <size>2</size>
+   </internalDataColumns>
+   <internalDataColumns>
+      <columnIndex>14</columnIndex>
+      <name>JDE SalesUnit</name>
       <size>2</size>
    </internalDataColumns>
    <isInternalPath>false</isInternalPath>

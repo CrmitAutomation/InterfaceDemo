@@ -8,8 +8,7 @@ import com.kms.katalon.core.context.TestCaseContext
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 class LoginListener {
-	//@BeforeTestCase
-    @BeforeTestSuite
+	@BeforeTestCase
     def beforeTestCase(TestCaseContext tcContext) {
 
         Map<String, Object> vars = tcContext.getTestCaseVariables()
@@ -29,8 +28,8 @@ class LoginListener {
         WebUI.comment("Login successful for user: ${username}")
     }
 
-    //@AfterTestCase
-	@AfterTestSuite
+    @AfterTestCase
+	
     def afterTestCase(TestCaseContext tcContext) {
         try {
             WebUI.waitForElementClickable(findTestObject('LogoutPage/ProfileIcon'), 5)

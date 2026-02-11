@@ -80,5 +80,29 @@
          <value>ScenarioType</value>
          <variableId>8e12d02e-3290-45bf-8153-5d0cc495fd82</variableId>
       </variableLink>
+      <variableLink>
+         <testDataLinkId>e7e908f4-12b4-40ae-ac06-3d04326906ad</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>FileName</value>
+         <variableId>39a85fd4-3bc3-4552-803b-03ef0a653c3c</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>e7e908f4-12b4-40ae-ac06-3d04326906ad</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>AttachmentText</value>
+         <variableId>a0fd5b71-059f-4552-803a-12a10ba07574</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>cca42712-573c-4d52-97aa-f35a48aec6e7</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>2bf709b6-1cfb-4b1d-ba42-eb007b37b8d3</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

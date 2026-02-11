@@ -214,9 +214,13 @@ WebUI.delay(2)
 
 WebUI.click(findTestObject('CreateSalesOrderPage/LineItemTab/LineItemNotes/SaveNotes'))
 
-WebUI.delay(2)
+WebUI.delay(3)
 
-WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/SplitsTab/SplitsTab'), 10)
+WebUI.click(findTestObject('CreateSalesOrderPage/CommonElements/SaveDraft'))
+
+WebUI.delay(3)
+
+WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/SplitsTab/SplitsTab'), 20)
 
 WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/SplitsTab'))
 
@@ -224,7 +228,17 @@ WebUI.delay(3)
 
 WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/SplitsTab/ExistingCommissionSplit'), 2)
 
-WebUI.setText(findTestObject('CreateSalesOrderPage/SplitsTab/ExistingCommissionSplit'), ExistingCommissionSplit)
+WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/ExistingCommisionSplitEdit'))
+
+WebUI.clearText(findTestObject('CreateSalesOrderPage/SplitsTab/ExistingCommissionSplit'))
+
+WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/SplitsTab/ExistingCommissionSplit'), 2)
+
+WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/ExistingCommisionSplitEdit'))
+
+WebUI.delay(5)
+
+WebUI.setText(findTestObject('CreateSalesOrderPage/SplitsTab/ExistingCommissionSplit'), '50')
 
 WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/SplitsTab/Save'), 2)
 
@@ -238,7 +252,7 @@ WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/Create_EditButton'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/Userlookup'))
+WebUI.doubleClick(findTestObject('CreateSalesOrderPage/SplitsTab/Userlookup'))
 
 WebUI.delay(2)
 

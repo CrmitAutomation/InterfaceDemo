@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//td[@data-label=&quot;Commission Split (%)&quot;]//lightning-formatted-number</value>
+         <value>//label[contains(normalize-space(),'Commission Split (%)')] /following::input[@inputmode=&quot;decimal&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

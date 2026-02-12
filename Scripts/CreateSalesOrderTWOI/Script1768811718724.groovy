@@ -367,7 +367,7 @@ WebUI.comment(('UI FULL TEXT CAPTURED -> [' + rawText) + ']')
 // Extract only numeric value from UI text
 String jdeSapOrderNumber = rawText.replaceAll('[^0-9]', '')
 
-WebUI.comment(('EXTRACTED ORDER NUMBER -> [' + jdeSapOrderNumber) + ']')
+WebUI.comment(('EXTRACTED JDE/SAP ORDER NUMBER -> [' + jdeSapOrderNumber) + ']')
 
 // Hard validation
 if ((jdeSapOrderNumber != null) && !(jdeSapOrderNumber.isEmpty())) {

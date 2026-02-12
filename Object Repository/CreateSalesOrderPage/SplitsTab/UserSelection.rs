@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class=&quot;slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left&quot;]//ul//li//lightning-base-combobox-item</value>
+         <value>//div[@role=&quot;listbox&quot;]//ul//li//lightning-base-combobox-item</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

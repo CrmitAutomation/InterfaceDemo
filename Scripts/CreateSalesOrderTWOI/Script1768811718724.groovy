@@ -309,6 +309,10 @@ WebUI.click(findTestObject('CreateSalesOrderPage/OrderPage/OrderButton'))
 
 WebUI.delay(3)
 
+WebUI.refresh()
+
+WebUI.waitForElementPresent(findTestObject('CreateSalesOrderPage/OrderPage/JDE-SAP-Order'), 20)
+
 WebUI.takeScreenshot()
 
 WebUI.comment('Screenshot captured after Order is initiated')

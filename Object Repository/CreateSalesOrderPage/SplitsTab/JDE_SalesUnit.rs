@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//label[contains(normalize-space(),'JDE SalesUnit #')] /following::input[1]</value>
+         <value>//input[@name=&quot;JDE_SalesUnit__c&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

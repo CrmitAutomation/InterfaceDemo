@@ -93,15 +93,15 @@
          <variableId>a0fd5b71-059f-4552-803a-12a10ba07574</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>e7e908f4-12b4-40ae-ac06-3d04326906ad</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>Userlookup</value>
          <variableId>cca42712-573c-4d52-97aa-f35a48aec6e7</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>e7e908f4-12b4-40ae-ac06-3d04326906ad</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>ExistingCommissionSplit</value>
          <variableId>2bf709b6-1cfb-4b1d-ba42-eb007b37b8d3</variableId>
       </variableLink>
    </testCaseLink>

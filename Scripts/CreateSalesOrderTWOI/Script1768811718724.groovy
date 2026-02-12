@@ -238,7 +238,7 @@ WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/ExistingCommisionSpli
 
 WebUI.delay(5)
 
-WebUI.setText(findTestObject('CreateSalesOrderPage/SplitsTab/ExistingCommissionSplit'), '50')
+WebUI.setText(findTestObject('CreateSalesOrderPage/SplitsTab/ExistingCommissionSplit'), ExistingCommissionSplit)
 
 WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/SplitsTab/Save'), 2)
 
@@ -314,37 +314,54 @@ WebUI.takeScreenshot()
 WebUI.comment('Screenshot captured after Order is initiated')
 
 // ==================================================
-// ORDER VALIDATION
+// ORDER VALIDATION – 100% STABLE VERSION
 // ==================================================
 TestObject orderObj = findTestObject('CreateSalesOrderPage/OrderPage/JDE-SAP-Order')
 
-WebUI.waitForElementPresent(orderObj, 20)
+// Wait until element is visible
+WebUI.waitForElementVisible(orderObj, 60)
 
+// Wait until element text is populated (polling)
 String rawText = ''
 
-int waitTime = 20
+int timeout = 60
 
-int elapsed = 0
+int counter = 0
 
-while (elapsed < waitTime) {
-    rawText = WebUI.getText(orderObj).trim()
+while (counter < timeout) {
+    rawText = WebUI.getText(orderObj)
 
-    if ((rawText != null) && !(rawText.isEmpty())) {
+    if ((rawText != null) && !(rawText.trim().isEmpty())) {
+        rawText = rawText.trim()
+
         break
     }
     
     WebUI.delay(1)
 
-    elapsed++
+    counter++
 }
 
-WebUI.comment(('RAW captured JDE/SAP text: [' + rawText) + ']')
+// Final trim safety
+rawText = rawText.trim()
 
+WebUI.comment(('UI FULL TEXT CAPTURED -> [' + rawText) + ']')
+
+// Extract only numeric value from UI text
 String jdeSapOrderNumber = rawText.replaceAll('[^0-9]', '')
 
-if (jdeSapOrderNumber) {
-    WebUI.comment('Sales Order placed successfully. JDE/SAP Order Number: ' + jdeSapOrderNumber)
+WebUI.comment(('EXTRACTED ORDER NUMBER -> [' + jdeSapOrderNumber) + ']')
+
+// Hard validation
+if ((jdeSapOrderNumber != null) && !(jdeSapOrderNumber.isEmpty())) {
+    WebUI.comment('Sales Order placed successfully.')
+
+    WebUI.comment('JDE/SAP Order Number: ' + jdeSapOrderNumber)
 } else {
+    WebUI.takeScreenshot()
+
     WebUI.comment('Sales Order NOT placed. JDE/SAP Order Number not generated.')
+
+    assert false : 'JDE/SAP Order Number was not captured from UI'
 }
 

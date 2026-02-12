@@ -86,15 +86,15 @@ WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/HeaderTab/Price
 
 WebUI.setText(findTestObject('CreateSalesOrderPage/HeaderTab/PriceBook'), PricebookName)
 
-WebUI.delay(5)
+WebUI.delay(7)
 
-WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/HeaderTab/PricebookSelection'), 15)
+WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/HeaderTab/PricebookSelection'), 20)
 
 WebUI.click(findTestObject('CreateSalesOrderPage/HeaderTab/PricebookSelection'))
 
 WebUI.delay(3)
 
-WebUI.setText(findTestObject('CreateSalesOrderPage/HeaderTab/JobName'), 'Test')
+WebUI.setText(findTestObject('CreateSalesOrderPage/HeaderTab/JobName'), 'Test Automation')
 
 WebUI.delay(3)
 
@@ -110,6 +110,8 @@ WebUI.click(findTestObject('CreateSalesOrderPage/HeaderTab/MarketSegment'))
 
 WebUI.delay(3)
 
+WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/HeaderTab/MarketSegmentValue'), 20)
+
 WebUI.click(findTestObject('CreateSalesOrderPage/HeaderTab/MarketSegmentValue'))
 
 WebUI.delay(3)
@@ -117,6 +119,8 @@ WebUI.delay(3)
 WebUI.click(findTestObject('CreateSalesOrderPage/HeaderTab/MarketCode'))
 
 WebUI.delay(3)
+
+WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/HeaderTab/MarketCodeValue'), 0)
 
 WebUI.click(findTestObject('CreateSalesOrderPage/HeaderTab/MarketCodeValue'))
 
@@ -128,7 +132,7 @@ WebUI.setText(findTestObject('CreateSalesOrderPage/HeaderTab/ETMTerritory'), ETM
 
 WebUI.delay(3)
 
-WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/HeaderTab/ETMTerritorySelection'), 10)
+WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/HeaderTab/ETMTerritorySelection'), 20)
 
 WebUI.click(findTestObject('CreateSalesOrderPage/HeaderTab/ETMTerritorySelection'))
 
@@ -223,7 +227,6 @@ WebUI.delay(3)
 // ==================================================
 // SPLITS SECTION DETAILS
 // ==================================================
-
 WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/SplitsTab/SplitsTab'), 20)
 
 WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/SplitsTab'))
@@ -264,17 +267,25 @@ WebUI.setText(findTestObject('CreateSalesOrderPage/SplitsTab/Userlookup'), Userl
 
 WebUI.delay(2)
 
+WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/SplitsTab/UserSelection'), 25)
+
 WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/UserSelection'))
 
 WebUI.delay(4)
 
-WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/SplitsTab/Influence_Commission'), 10)
+WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/TitleClick'))
 
-WebUI.setText(findTestObject('CreateSalesOrderPage/SplitsTab/Influence_Commission'), Influence / Commission)
+WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/SplitsTab/InfluenceCommission'), 10)
 
-WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/SplitsTab/JDE_SalesUnit'), 5)
+WebUI.setText(findTestObject('CreateSalesOrderPage/SplitsTab/InfluenceCommission'), Influence / Commission)
 
-WebUI.setText(findTestObject('CreateSalesOrderPage/SplitsTab/JDE_SalesUnit'), JDE SalesUnit)
+WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/TitleClick'))
+
+WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/SplitsTab/JDESalesUnit'), 5)
+
+WebUI.setText(findTestObject('CreateSalesOrderPage/SplitsTab/JDESalesUnit'), JDE SalesUnit)
+
+WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/TitleClick'))
 
 WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/SplitsTab/AddButton'), 10)
 

@@ -220,6 +220,10 @@ WebUI.click(findTestObject('CreateSalesOrderPage/CommonElements/SaveDraft'))
 
 WebUI.delay(3)
 
+// ==================================================
+// SPLITS SECTION DETAILS
+// ==================================================
+
 WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/SplitsTab/SplitsTab'), 20)
 
 WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/SplitsTab'))
@@ -262,7 +266,7 @@ WebUI.delay(2)
 
 WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/UserSelection'))
 
-WebUI.delay(2)
+WebUI.delay(4)
 
 WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/SplitsTab/Influence_Commission'), 10)
 

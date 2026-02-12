@@ -273,19 +273,17 @@ WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/UserSelection'))
 
 WebUI.delay(4)
 
-WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/TitleClick'))
+WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/InfluenceCommission'))
 
 WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/SplitsTab/InfluenceCommission'), 10)
 
-WebUI.setText(findTestObject('CreateSalesOrderPage/SplitsTab/InfluenceCommission'), Influence / Commission)
+WebUI.setText(findTestObject('CreateSalesOrderPage/SplitsTab/InfluenceCommission'), InfluenceCommission)
 
-WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/TitleClick'))
+WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/JDESalesUnit'))
 
 WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/SplitsTab/JDESalesUnit'), 5)
 
-WebUI.setText(findTestObject('CreateSalesOrderPage/SplitsTab/JDESalesUnit'), JDE SalesUnit)
-
-WebUI.click(findTestObject('CreateSalesOrderPage/SplitsTab/TitleClick'))
+WebUI.setText(findTestObject('CreateSalesOrderPage/SplitsTab/JDESalesUnit'), JDESalesUnit)
 
 WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/SplitsTab/AddButton'), 10)
 

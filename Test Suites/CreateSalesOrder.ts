@@ -104,5 +104,17 @@
          <value>ExistingCommissionSplit</value>
          <variableId>2bf709b6-1cfb-4b1d-ba42-eb007b37b8d3</variableId>
       </variableLink>
+      <variableLink>
+         <testDataLinkId>e7e908f4-12b4-40ae-ac06-3d04326906ad</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>InfluenceCommission</value>
+         <variableId>28351840-a092-4168-82cb-60a7fe320e17</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>e7e908f4-12b4-40ae-ac06-3d04326906ad</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>JDESalesUnit</value>
+         <variableId>aa57f0e7-21ff-4c51-8311-ecd65d618ea3</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

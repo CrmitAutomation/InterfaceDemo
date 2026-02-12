@@ -84,6 +84,18 @@
       <value></value>
       <variableId>2bf709b6-1cfb-4b1d-ba42-eb007b37b8d3</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>28351840-a092-4168-82cb-60a7fe320e17</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>aa57f0e7-21ff-4c51-8311-ecd65d618ea3</variableId>
+   </variableLinks>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
@@ -174,5 +186,19 @@
       <id>2bf709b6-1cfb-4b1d-ba42-eb007b37b8d3</id>
       <masked>false</masked>
       <name>ExistingCommissionSplit</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>28351840-a092-4168-82cb-60a7fe320e17</id>
+      <masked>false</masked>
+      <name>InfluenceCommission</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>aa57f0e7-21ff-4c51-8311-ecd65d618ea3</id>
+      <masked>false</masked>
+      <name>JDESalesUnit</name>
    </variable>
 </TestCaseEntity>

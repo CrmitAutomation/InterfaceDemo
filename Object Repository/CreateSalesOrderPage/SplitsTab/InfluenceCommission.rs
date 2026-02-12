@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//input[@name=&quot;Commission_Split__c&quot;]</value>
+         <value>//label[contains(normalize-space(),'Influence / Commission %')] /following::input[@inputmode=&quot;decimal&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

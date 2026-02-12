@@ -96,6 +96,24 @@
       <value></value>
       <variableId>aa57f0e7-21ff-4c51-8311-ecd65d618ea3</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>19bbbd44-e989-421c-9ab1-70a9e3bcd3b5</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>ad2ecda6-25b4-4ce4-ad9e-819d30cd6c7a</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>339e87c5-3e45-4419-82f7-9452c24657d9</variableId>
+   </variableLinks>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
@@ -200,5 +218,26 @@
       <id>aa57f0e7-21ff-4c51-8311-ecd65d618ea3</id>
       <masked>false</masked>
       <name>JDESalesUnit</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>19bbbd44-e989-421c-9ab1-70a9e3bcd3b5</id>
+      <masked>false</masked>
+      <name>JobName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>ad2ecda6-25b4-4ce4-ad9e-819d30cd6c7a</id>
+      <masked>false</masked>
+      <name>MarketSegmentValue</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>339e87c5-3e45-4419-82f7-9452c24657d9</id>
+      <masked>false</masked>
+      <name>MarketCodeValue</name>
    </variable>
 </TestCaseEntity>

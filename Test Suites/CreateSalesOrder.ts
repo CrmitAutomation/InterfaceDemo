@@ -116,5 +116,23 @@
          <value>JDESalesUnit</value>
          <variableId>aa57f0e7-21ff-4c51-8311-ecd65d618ea3</variableId>
       </variableLink>
+      <variableLink>
+         <testDataLinkId>e7e908f4-12b4-40ae-ac06-3d04326906ad</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>JobName</value>
+         <variableId>19bbbd44-e989-421c-9ab1-70a9e3bcd3b5</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>e7e908f4-12b4-40ae-ac06-3d04326906ad</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>MarketSegmentValue</value>
+         <variableId>ad2ecda6-25b4-4ce4-ad9e-819d30cd6c7a</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>e7e908f4-12b4-40ae-ac06-3d04326906ad</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>MarketCodeValue</value>
+         <variableId>339e87c5-3e45-4419-82f7-9452c24657d9</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

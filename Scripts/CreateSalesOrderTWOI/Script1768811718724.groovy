@@ -82,6 +82,8 @@ WebUI.delay(3)
 // ==================================================
 // PRICEBOOK DETAILS
 // ==================================================
+
+// Price Book Field
 WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/HeaderTab/PriceBook'), 15)
 
 WebUI.setText(findTestObject('CreateSalesOrderPage/HeaderTab/PriceBook'), PricebookName)
@@ -94,10 +96,12 @@ WebUI.click(findTestObject('CreateSalesOrderPage/HeaderTab/PricebookSelection'))
 
 WebUI.delay(3)
 
-WebUI.setText(findTestObject('CreateSalesOrderPage/HeaderTab/JobName'), 'Test Automation')
+// Job Name Field
+WebUI.setText(findTestObject('CreateSalesOrderPage/HeaderTab/JobName'), JobName)
 
 WebUI.delay(3)
 
+// PO Number Field
 String timestamp = new SimpleDateFormat('yyyyMMddHHmmss').format(new Date())
 
 String uniquePONumber = 'PO' + timestamp
@@ -106,26 +110,36 @@ WebUI.setText(findTestObject('CreateSalesOrderPage/HeaderTab/PoNumber'), uniqueP
 
 WebUI.delay(3)
 
+// Market Segment Picklist Field
 WebUI.click(findTestObject('CreateSalesOrderPage/HeaderTab/MarketSegment'))
 
-WebUI.delay(3)
+WebUI.delay(2)
 
-WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/HeaderTab/MarketSegmentValue'), 20)
+String dynamicXpath = "//lightning-base-combobox-item[@data-value='" + MarketSegmentValue + "']"
 
-WebUI.click(findTestObject('CreateSalesOrderPage/HeaderTab/MarketSegmentValue'))
+TestObject dynamicOption = new TestObject()
+dynamicOption.addProperty("xpath", 
+    com.kms.katalon.core.testobject.ConditionType.EQUALS, 
+    dynamicXpath)
 
-WebUI.delay(3)
+WebUI.waitForElementClickable(dynamicOption, 20)
+WebUI.click(dynamicOption)
 
+WebUI.delay(2)
+
+// Market Code Picklist Field
+WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/HeaderTab/MarketCode'), 20)
 WebUI.click(findTestObject('CreateSalesOrderPage/HeaderTab/MarketCode'))
 
-WebUI.delay(3)
+TestObject dynamicMarketCode = new TestObject()
+dynamicMarketCode.addProperty("xpath",
+    com.kms.katalon.core.testobject.ConditionType.EQUALS,
+    "//lightning-base-combobox-item[@data-value='" + MarketCodeValue + "']")
 
-WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/HeaderTab/MarketCodeValue'), 0)
+WebUI.waitForElementClickable(dynamicMarketCode, 20)
+WebUI.click(dynamicMarketCode)
 
-WebUI.click(findTestObject('CreateSalesOrderPage/HeaderTab/MarketCodeValue'))
-
-WebUI.delay(3)
-
+// ETM Territory Field
 WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/HeaderTab/ETMTerritory'), 15)
 
 WebUI.setText(findTestObject('CreateSalesOrderPage/HeaderTab/ETMTerritory'), ETMTerritory)
@@ -294,18 +308,24 @@ WebUI.delay(3)
 // ==================================================
 // SUBMIT & ORDER CREATION
 // ==================================================
+/*
 if (ScenarioType.equalsIgnoreCase('Positive')) {
-    WebUI.comment('Positive scenario: Clicking Save Draft before Submit ERP')
+*/
+WebUI.comment('Positive scenario: Clicking Save Draft before Submit ERP')
 
-    WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/CommonElements/SaveDraft'), 20)
+WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/CommonElements/SaveDraft'), 20)
 
-    WebUI.click(findTestObject('CreateSalesOrderPage/CommonElements/SaveDraft'))
+WebUI.click(findTestObject('CreateSalesOrderPage/CommonElements/SaveDraft'))
 
-    WebUI.delay(3)
-} else {
+WebUI.delay(3)
+
+/*	
+} 
+else {
+	
     WebUI.comment('Negative scenario: Save Draft skipped before Submit ERP')
 }
-
+*/
 WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/CommonElements/SubmitERP'), 25)
 
 WebUI.click(findTestObject('CreateSalesOrderPage/CommonElements/SubmitERP'))

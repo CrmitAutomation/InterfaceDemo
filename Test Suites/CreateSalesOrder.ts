@@ -134,5 +134,17 @@
          <value>MarketCodeValue</value>
          <variableId>339e87c5-3e45-4419-82f7-9452c24657d9</variableId>
       </variableLink>
+      <variableLink>
+         <testDataLinkId>e7e908f4-12b4-40ae-ac06-3d04326906ad</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>CancellationDescription</value>
+         <variableId>a01038f2-d693-448f-a085-b33c95df191b</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>e7e908f4-12b4-40ae-ac06-3d04326906ad</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>CancellationReasonCode</value>
+         <variableId>e4874d13-3c09-4e20-aa14-6ba3ab42d0fe</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

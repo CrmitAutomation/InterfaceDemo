@@ -114,6 +114,18 @@
       <value></value>
       <variableId>339e87c5-3e45-4419-82f7-9452c24657d9</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>a01038f2-d693-448f-a085-b33c95df191b</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>e4874d13-3c09-4e20-aa14-6ba3ab42d0fe</variableId>
+   </variableLinks>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
@@ -239,5 +251,19 @@
       <id>339e87c5-3e45-4419-82f7-9452c24657d9</id>
       <masked>false</masked>
       <name>MarketCodeValue</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>a01038f2-d693-448f-a085-b33c95df191b</id>
+      <masked>false</masked>
+      <name>CancelledDescription</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>e4874d13-3c09-4e20-aa14-6ba3ab42d0fe</id>
+      <masked>false</masked>
+      <name>CancellationReasonCode</name>
    </variable>
 </TestCaseEntity>

@@ -28,7 +28,7 @@ class LoginListener {
         WebUI.comment("Login successful for user: ${username}")
     }
 
-    @AfterTestCase
+    @AfterTestSuite
 	
     def afterTestCase(TestCaseContext tcContext) {
         try {

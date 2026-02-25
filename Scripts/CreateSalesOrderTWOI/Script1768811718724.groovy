@@ -82,7 +82,6 @@ WebUI.delay(3)
 // ==================================================
 // PRICEBOOK DETAILS
 // ==================================================
-
 // Price Book Field
 WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/HeaderTab/PriceBook'), 15)
 
@@ -115,28 +114,30 @@ WebUI.click(findTestObject('CreateSalesOrderPage/HeaderTab/MarketSegment'))
 
 WebUI.delay(2)
 
-String dynamicXpath = "//lightning-base-combobox-item[@data-value='" + MarketSegmentValue + "']"
+String dynamicXpath = ('//lightning-base-combobox-item[@data-value=\'' + MarketSegmentValue) + '\']'
 
 TestObject dynamicOption = new TestObject()
-dynamicOption.addProperty("xpath", 
-    com.kms.katalon.core.testobject.ConditionType.EQUALS, 
-    dynamicXpath)
+
+dynamicOption.addProperty('xpath', com.kms.katalon.core.testobject.ConditionType.EQUALS, dynamicXpath)
 
 WebUI.waitForElementClickable(dynamicOption, 20)
+
 WebUI.click(dynamicOption)
 
 WebUI.delay(2)
 
 // Market Code Picklist Field
 WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/HeaderTab/MarketCode'), 20)
+
 WebUI.click(findTestObject('CreateSalesOrderPage/HeaderTab/MarketCode'))
 
 TestObject dynamicMarketCode = new TestObject()
-dynamicMarketCode.addProperty("xpath",
-    com.kms.katalon.core.testobject.ConditionType.EQUALS,
-    "//lightning-base-combobox-item[@data-value='" + MarketCodeValue + "']")
+
+dynamicMarketCode.addProperty('xpath', com.kms.katalon.core.testobject.ConditionType.EQUALS, ('//lightning-base-combobox-item[@data-value=\'' + 
+    MarketCodeValue) + '\']')
 
 WebUI.waitForElementClickable(dynamicMarketCode, 20)
+
 WebUI.click(dynamicMarketCode)
 
 // ETM Territory Field
@@ -350,6 +351,8 @@ WebUI.takeScreenshot()
 
 WebUI.comment('Screenshot captured after Order is initiated')
 
+WebUI.delay(3)
+
 // ==================================================
 // ORDER VALIDATION – 100% STABLE VERSION
 // ==================================================
@@ -390,11 +393,13 @@ String jdeSapOrderNumber = rawText.replaceAll('[^0-9]', '')
 WebUI.comment(('EXTRACTED JDE/SAP ORDER NUMBER -> [' + jdeSapOrderNumber) + ']')
 
 // Hard validation
-if ((jdeSapOrderNumber != null) && !(jdeSapOrderNumber.isEmpty())) {
+if ((jdeSapOrderNumber != null) && !(jdeSapOrderNumber.isEmpty())) 
+{
     WebUI.comment('Sales Order placed successfully.')
 
     WebUI.comment('JDE/SAP Order Number: ' + jdeSapOrderNumber)
-} else {
+} 
+else {
     WebUI.takeScreenshot()
 
     WebUI.comment('Sales Order NOT placed. JDE/SAP Order Number not generated.')
@@ -402,3 +407,46 @@ if ((jdeSapOrderNumber != null) && !(jdeSapOrderNumber.isEmpty())) {
     assert false : 'JDE/SAP Order Number was not captured from UI'
 }
 
+WebUI.waitForElementClickable(findTestObject('CreateSalesOrderPage/OrderPage/EditButton'),60,FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('CreateSalesOrderPage/OrderPage/EditButton'))
+
+WebUI.delay(5)
+
+WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/OrderPage/CancelOrder'), 15)
+
+WebUI.click(findTestObject('CreateSalesOrderPage/OrderPage/CancelOrder'))
+
+WebUI.delay(3)
+
+//Cancellation Reason Code
+WebUI.click(findTestObject('CreateSalesOrderPage/OrderPage/CancellationReasonCode'))
+
+WebUI.delay(3)
+
+// Cancellation Reason Code picklist field
+String CancellationCXpath = "//lightning-base-combobox-item[@data-value='" + CancellationReasonCode + "']"
+
+TestObject dynamicOption2 = new TestObject()
+
+dynamicOption2.addProperty('xpath', com.kms.katalon.core.testobject.ConditionType.EQUALS, CancellationCXpath)
+
+WebUI.waitForElementClickable(dynamicOption2, 20)
+
+WebUI.click(dynamicOption2)
+
+WebUI.delay(2)
+
+WebUI.setText(findTestObject('CreateSalesOrderPage/OrderPage/CancelledDescription'), CancelledDescription)
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('CreateSalesOrderPage/OrderPage/ConfirmButton'))
+
+WebUI.waitForElementVisible(findTestObject('CreateSalesOrderPage/OrderPage/JDE-SAP-Order'), 20)
+
+WebUI.takeScreenshot()
+
+WebUI.comment('Cancelled the Created Sales Order')
+
+WebUI.delay(5)

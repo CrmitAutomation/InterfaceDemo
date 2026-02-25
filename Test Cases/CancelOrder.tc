@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CancelOrder</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1bcf56a6-51ce-4e06-8484-e22bb99542ca</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>1012a589-4482-4d1f-ae95-b22cbca4d650</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>1012a589-4482-4d1f-ae95-b22cbca4d650</id>
+      <masked>false</masked>
+      <name>CancelledDescription</name>
+   </variable>
+</TestCaseEntity>
